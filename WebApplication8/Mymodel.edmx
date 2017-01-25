@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="personelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'personel.dbo.personel_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="personel_1">
+          <Key>
+            <PropertyRef Name="müşteri_adı" />
+            <PropertyRef Name="seyahat_gidiş" />
+            <PropertyRef Name="seyahat_geliş" />
+            <PropertyRef Name="kişi_sayısı" />
+            <PropertyRef Name="hangi_bölgeden" />
+            <PropertyRef Name="hangi_bölgeye" />
+          </Key>
+          <Property Name="müşteri_adı" Type="int" Nullable="false" />
+          <Property Name="seyahat_gidiş" Type="date" Nullable="false" />
+          <Property Name="seyahat_geliş" Type="date" Nullable="false" />
+          <Property Name="kişi_sayısı" Type="int" Nullable="false" />
+          <Property Name="hangi_bölgeden" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="hangi_bölgeye" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="personelModelStoreContainer">
+          <EntitySet Name="personel_1" EntityType="Self.personel_1" store:Type="Tables" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+    [personel_1].[müşteri_adı] AS [müşteri_adı], 
+    [personel_1].[seyahat_gidiş] AS [seyahat_gidiş], 
+    [personel_1].[seyahat_geliş] AS [seyahat_geliş], 
+    [personel_1].[kişi_sayısı] AS [kişi_sayısı], 
+    [personel_1].[hangi_bölgeden] AS [hangi_bölgeden], 
+    [personel_1].[hangi_bölgeye] AS [hangi_bölgeye]
+    FROM [dbo].[personel_1] AS [personel_1]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="personelModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityType Name="personel_1">
+          <Key>
+            <PropertyRef Name="müşteri_adı" />
+            <PropertyRef Name="seyahat_gidiş" />
+            <PropertyRef Name="seyahat_geliş" />
+            <PropertyRef Name="kişi_sayısı" />
+            <PropertyRef Name="hangi_bölgeden" />
+            <PropertyRef Name="hangi_bölgeye" />
+          </Key>
+          <Property Name="müşteri_adı" Type="Int32" Nullable="false" />
+          <Property Name="seyahat_gidiş" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="seyahat_geliş" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="kişi_sayısı" Type="Int32" Nullable="false" />
+          <Property Name="hangi_bölgeden" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="hangi_bölgeye" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="personelEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="personel_1" EntityType="Self.personel_1" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="personelModelStoreContainer" CdmEntityContainer="personelEntities">
+          <EntitySetMapping Name="personel_1">
+            <EntityTypeMapping TypeName="personelModel.personel_1">
+              <MappingFragment StoreEntitySet="personel_1">
+                <ScalarProperty Name="müşteri_adı" ColumnName="müşteri_adı" />
+                <ScalarProperty Name="seyahat_gidiş" ColumnName="seyahat_gidiş" />
+                <ScalarProperty Name="seyahat_geliş" ColumnName="seyahat_geliş" />
+                <ScalarProperty Name="kişi_sayısı" ColumnName="kişi_sayısı" />
+                <ScalarProperty Name="hangi_bölgeden" ColumnName="hangi_bölgeden" />
+                <ScalarProperty Name="hangi_bölgeye" ColumnName="hangi_bölgeye" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Turizm</title>
+    <link href="~/Content/css/css.css"rel="stylesheet" />
+</head>
+<body>
+    <section id="container">
+        <header>
+            <a href="/">
+                <div id="logo"></div>
+            </a>
+            <div id="socialmedia">
+                <a href="http://facebook.com/"target="_blank">
+            <div class="social">
+                <img src="~/Content/img/facebook.png" alt="facebook"/>
+            </div>
+                </a>
+                <a href="http://twitter.com" target="_blank">
+                    <div class="social">
+                        <img src="~/Content/img/twitter.png" alt="twitter" />
+                    </div>
+                    </a>
+                <a href="http//google.plus.com" target="_blank">
+                    <div class="social">
+                        <img src="~/Content/img/googleplus.png" alt="google plus" />
+                    </div>
+                </a>
+                </div>
+        </header> 
+        <nav>
+  <a href="/">
+            <div class="nav-item">
+                <span>Ana Sayfa</span>
+              </div>
+            </a>
+            <a href="/satış">
+            <div class="nav-item">
+                <span>Satış</span> 
+            </div>
+                </a>
+            <a href="/referans">
+            <div class="nav-item">
+              <span>Referans</span>
+            </div>
+                </a>
+            <a href="/hakkımızda">
+            <div class="nav-item">
+                <span>Hakkımızda</span>
+            </div>
+                </a>
+            <a href="/iletişim">
+            <div class="nav-item"style="width:192px;border-right:0;">
+                <span>İletişim</span>
+            </div> 
+                </a>
+        </nav>
+        <section id="content">
+@RenderBody()
+        </section>
+        <footer>
+            <small>2016 &copy;Firma Adı | Tüm Hakları Saklıdır</small>
+        </footer>
+        </section>
+ 
+</body>
+</html>
